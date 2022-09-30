@@ -1,5 +1,5 @@
 @extends('template')
 
 @section('content')
-    <h1>Register</h1>
+    <h1 class="text-center">Register</h1>
 @endsection
