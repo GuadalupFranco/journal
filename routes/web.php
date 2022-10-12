@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\ViewsController;
 
 /*
 |--------------------------------------------------------------------------
@@ -12,15 +13,20 @@ use Illuminate\Support\Facades\Route;
 | contains the "web" middleware group. Now create something great!
 |
 */
-
-Route::get('/', function () {
-    return view('welcome');
-});
-
-Auth::routes();
+/* Auth::routes(); */
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
-Route::view('/house', 'house')->name('house');
-Route::view('/register', 'register')->name('register'); 
-Route::view('/memory', 'memory')->name('memory');
+/* Route::get('/', [ViewsController::class, 'showWelcome']);
+Route::get('/house', [ViewsController::class, 'showHome'])->name('house');
+Route::get('/register', [ViewsController::class, 'showRegister'])->name('register');
+Route::get('/memory', [ViewsController::class, 'showMemory'])->name('memory'); */
+
+Route::controller(ViewsController::class)->group(
+    function(){
+        Route::get('/', 'showWelcome');
+        Route::get('/house', 'showHome')->name('house');
+        Route::get('/register', 'showRegister')->name('register');
+        Route::get('/memory', 'showMemory')->name('memory');
+    }
+);
