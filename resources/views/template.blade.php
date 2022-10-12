@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,6 +8,7 @@
     <title>Laravel Journal</title>
     @vite(['resources/sass/app.scss', 'resources/js/app.js'])
 </head>
+
 <body>
     <div id="app">
         <!-- Nav bar starts -->
@@ -17,11 +19,20 @@
                     <span class="navbar-toggler-icon"></span>
                 </button>
                 <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-                <div class="navbar-nav">
-                    <a class="nav-link active" aria-current="page" href="{{ route('house') }}">Home</a>
-                    <a class="nav-link active" aria-current="page" href="{{ route('memory') }}">Memory</a>
-                    <a class="nav-link active" aria-current="page" href="{{ route('register') }}">Register</a>
-                </div>
+                    <div class="navbar-nav me-auto py-1 my-lg-0 navbar-nav-scroll" style="--bs-scroll-height: 100px;">
+                        <li class="nav-item">
+                            <a class="nav-link" href="{{ route('house') }}">House</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarScrollingDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                Memories
+                            </a>
+                            <ul class="dropdown-menu" aria-labelledby="navbarScrollingDropdown">
+                                <li><a class="dropdown-item" href="{{ route('register') }}">Register memory</a></li>
+                                <li><a class="dropdown-item" href="{{ route('memory') }}">Edit memory</a></li>
+                            </ul>
+                        </li>
+                    </div>
                 </div>
             </div>
         </nav>
@@ -35,8 +46,9 @@
 
         <!-- Footer starts -->
         <div class="alert alert-secondary" role="alert">
-            María Guadalupe Franco Ramírez 2022 © 
+            María Guadalupe Franco Ramírez 2022 ©
         </div>
     </div>
 </body>
+
 </html>
