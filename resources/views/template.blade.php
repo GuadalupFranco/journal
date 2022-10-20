@@ -21,15 +21,15 @@
                 <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
                     <div class="navbar-nav me-auto py-1 my-lg-0 navbar-nav-scroll" style="--bs-scroll-height: 100px;">
                         <li class="nav-item">
-                            <a class="nav-link" href="{{ route('house') }}">House</a>
+                            <a class="nav-link {{ request()->routeIs('house') ? 'text-secondary fw-bold' : '' }}" href="{{ route('house') }}">House</a>
                         </li>
                         <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" href="#" id="navbarScrollingDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            <a class="nav-link {{ request()->routeIs('register') || request()->routeIs('memories') ? 'text-secondary fw-bold' : '' }} dropdown-toggle" href="#" id="navbarScrollingDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                                 Memories
                             </a>
                             <ul class="dropdown-menu" aria-labelledby="navbarScrollingDropdown">
                                 <li><a class="dropdown-item" href="{{ route('register') }}">Register memory</a></li>
-                                <li><a class="dropdown-item" href="{{ route('memory') }}">Edit memory</a></li>
+                                <li><a class="dropdown-item" href="{{ route('memories') }}">Show memories</a></li>
                             </ul>
                         </li>
                     </div>

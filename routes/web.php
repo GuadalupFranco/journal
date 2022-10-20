@@ -27,6 +27,7 @@ Route::controller(ViewsController::class)->group(
         Route::get('/', 'showWelcome');
         Route::get('/house', 'showHome')->name('house');
         Route::get('/register', 'showRegister')->name('register');
-        Route::get('/memory', 'showMemory')->name('memory');
+        Route::post('/saveMemory', 'saveMemory')->name('saveMemory');
+        Route::get('/memories', 'showMemories')->name('memories');
     }
 );
