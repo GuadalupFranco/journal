@@ -25,7 +25,7 @@ class JournalRequest extends FormRequest
     {
         return [
             'title' => 'required|max:50|min:3',
-            'memory' => 'required|max:255|min:5'
+            'description' => 'required|max:255|min:5'
         ];
     }
 }

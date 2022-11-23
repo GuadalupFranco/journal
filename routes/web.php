@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\MemoryController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ViewsController;
 
@@ -31,3 +32,5 @@ Route::controller(ViewsController::class)->group(
         Route::get('/memories', 'showMemories')->name('memories');
     }
 );
+
+Route::resource('memory', MemoryController::class);

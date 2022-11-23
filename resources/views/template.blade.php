@@ -6,6 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.2/font/bootstrap-icons.css">
     @vite(['resources/sass/app.scss', 'resources/js/app.js'])
     <title>Laravel Journal</title>
 </head>
@@ -29,8 +30,8 @@
                                 Memories
                             </a>
                             <ul class="dropdown-menu" aria-labelledby="navbarScrollingDropdown">
-                                <li><a class="dropdown-item" href="{{ route('register') }}">Register memory</a></li>
-                                <li><a class="dropdown-item" href="{{ route('memories') }}">Show memories</a></li>
+                                <li><a class="dropdown-item" href="{{ route('memory.create') }}">Register memory</a></li>
+                                <li><a class="dropdown-item" href="{{ route('memory.index') }}">Show memories</a></li>
                             </ul>
                         </li>
                     </div>
