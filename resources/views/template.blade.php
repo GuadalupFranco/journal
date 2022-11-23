@@ -16,20 +16,26 @@
         <nav class="navbar navbar-expand-lg bg-light">
             <div class="container-fluid">
                 <a class="navbar-brand" href="/">My Journal</a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false"
+                    aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
                 <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
                     <div class="navbar-nav me-auto py-1 my-lg-0 navbar-nav-scroll" style="--bs-scroll-height: 100px;">
                         <li class="nav-item">
-                            <a class="nav-link {{ request()->routeIs('house') ? 'text-secondary fw-bold' : '' }}" href="{{ route('house') }}">House</a>
+                            <a class="nav-link {{ request()->routeIs('house') ? 'text-secondary fw-bold' : '' }}"
+                                href="{{ route('house') }}">House</a>
                         </li>
                         <li class="nav-item dropdown">
-                            <a class="nav-link {{ request()->routeIs('register') || request()->routeIs('memories') ? 'text-secondary fw-bold' : '' }} dropdown-toggle" href="#" id="navbarScrollingDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            <a class="nav-link {{ request()->routeIs('register') || request()->routeIs('memories') ? 'text-secondary fw-bold' : '' }} dropdown-toggle"
+                                href="#" id="navbarScrollingDropdown" role="button" data-bs-toggle="dropdown"
+                                aria-expanded="false">
                                 Memories
                             </a>
                             <ul class="dropdown-menu" aria-labelledby="navbarScrollingDropdown">
-                                <li><a class="dropdown-item" href="{{ route('memory.create') }}">Register memory</a></li>
+                                <li><a class="dropdown-item" href="{{ route('memory.create') }}">Register memory</a>
+                                </li>
                                 <li><a class="dropdown-item" href="{{ route('memory.index') }}">Show memories</a></li>
                             </ul>
                         </li>
@@ -46,9 +52,9 @@
         <!-- Main ends -->
 
         <!-- Footer starts -->
-        <div class="alert alert-secondary" role="alert">
+        <footer class="alert alert-secondary fixed-bottom mb-0">
             María Guadalupe Franco Ramírez 2022 ©
-        </div>
+        </footer>
     </div>
 </body>
 
