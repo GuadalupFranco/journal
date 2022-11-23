@@ -2,7 +2,9 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Requests\JournalRequest;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Redirect;
 
 class ViewsController extends Controller
 {
@@ -19,8 +21,11 @@ class ViewsController extends Controller
         return view('register');
     }
     
-    public function saveMemory(Request $request){
-        return $request->all();
+    public function saveMemory(JournalRequest $request){
+        return Redirect::route('register')
+            ->with('success', 'Form was send succesfully')
+            ->with('title', $request->title);
+
     }
 
     public function showMemories(){
