@@ -64,8 +64,16 @@ class MemoryController extends Controller
             ->with('title', $request->title);
     }
 
+    public function delete($id)
+    {
+        $memory = DB::table('memories')->where('id', $id)->first();
+        return view('delete', compact('memory'));
+    }
+
     public function destroy($id)
     {
-        //
+        DB::table('memories')->where('id', $id)->delete();
+        return Redirect::route('memory.index')
+            ->with('destroy-success', 'Memory updated succesfully');
     }
 }

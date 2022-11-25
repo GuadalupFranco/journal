@@ -13,6 +13,17 @@
     </script>"
 !!}
 @endif
+@if (session()->has('destroy-success'))
+{!!
+    "<script>
+        Swal.fire(
+            'Success!',
+            'The memory was deleted',
+            'success'
+        ) 
+    </script>"
+!!}
+@endif
 <div class="container my-2 col-md-5">
     <h1 class="text-center">Memories</h1>
     @forelse($memories as $memory)
@@ -28,7 +39,7 @@
                 <a href="{{route('memory.edit', $memory->id)}}" class="btn btn-warning mx-2">
                     <i class="bi bi-pencil-fill"></i>
                 </a>
-                <a href="#" class="btn btn-danger">
+                <a href="{{route('memory.delete', $memory->id)}}" class="btn btn-danger">
                     <i class="bi bi-trash-fill"></i>
                 </a>
             </div>
