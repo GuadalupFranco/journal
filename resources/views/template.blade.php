@@ -34,9 +34,18 @@
                                 Memories
                             </a>
                             <ul class="dropdown-menu" aria-labelledby="navbarScrollingDropdown">
-                                <li><a class="dropdown-item" href="{{ route('memory.create') }}">Register memory</a>
+                                <li>
+                                    <a class="dropdown-item" href="{{ route('memory.create') }}">
+                                        <i class="bi bi-journal-plus"></i>
+                                        Register memory
+                                    </a>
                                 </li>
-                                <li><a class="dropdown-item" href="{{ route('memory.index') }}">Show memories</a></li>
+                                <li>
+                                    <a class="dropdown-item" href="{{ route('memory.index') }}">
+                                        <i class="bi bi-journals"></i>
+                                        Show memories
+                                    </a>
+                                </li>
                             </ul>
                         </li>
                     </div>

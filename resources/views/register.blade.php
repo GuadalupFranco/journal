@@ -4,12 +4,12 @@
     @if (session()->has('create-success'))
         <?php $titulo = session()->get('title'); ?>
         {!! "<script>
-                                Swal.fire(
-                                    'Success!',
-                                    'The memory {$titulo} was created',
-                                    'success'
-                                ) 
-                            </script>" !!}
+                Swal.fire(
+                    'Success!',
+                    'The memory {$titulo} was created',
+                    'success'
+                ) 
+            </script>" !!}
     @endif
     <div class="container my-2 col-md-5">
         <h1 class="text-center display-2 mb-5">Register</h1>
@@ -43,7 +43,10 @@
                     </div>
             </div>
             <div class="card-footer">
-                <button type="submit" class="btn btn-success">Save memory</button>
+                <button type="submit" class="btn btn-success">
+                    <i class="bi bi-save me-1"></i>
+                    Save memory
+                </button>
                 </form>
             </div>
         </div>

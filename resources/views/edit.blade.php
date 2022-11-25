@@ -33,7 +33,10 @@
                     </div>
             </div>
             <div class="card-footer">
-                <button type="submit" class="btn btn-success">Update memory</button>
+                <button type="submit" class="btn btn-success">
+                    <i class="bi bi-save me-1"></i>
+                    Update memory
+                </button>
                 </form>
             </div>
         </div>

@@ -34,9 +34,15 @@
                     </div>
             </div>
             <div class="card-footer">
-                <button type="submit" class="btn btn-danger">Delete memory</button>
+                <button type="submit" class="btn btn-danger">
+                    <i class="bi bi-trash me-1"></i>
+                    Yes, delete it
+                </button>
                 <a href="{{ route('memory.index') }}">
-                    <button type="button" class="btn btn-primary">No, take me bak</button>
+                    <button type="button" class="btn btn-primary">
+                        <i class="bi bi-arrow-return-left me-1"></i>
+                        No, take me back
+                    </button>
                 </a>
                 </form>
             </div>
