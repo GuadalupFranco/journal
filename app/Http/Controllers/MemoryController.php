@@ -24,7 +24,7 @@ class MemoryController extends Controller
         return view('register');
     }
 
-    public function store(Request $request)
+    public function store(JournalRequest $request)
 
     {
         DB::table('memories')->insert([
@@ -35,8 +35,8 @@ class MemoryController extends Controller
             'updated_at' => Carbon::now()
         ]);
 
-        return Redirect::route('memory.create')
-            ->with('create-success', 'Memory created succesfully')
+        return Redirect::route('memory.index')
+            ->with('store-success', 'Memory created succesfully')
             ->with('title', $request->title);
     }
 
